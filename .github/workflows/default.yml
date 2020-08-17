@@ -1,0 +1,41 @@
+name: Python package
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '7 */7 * * *'
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: 
+      - ubuntu-latest
+      - windows-latest
+      - macos-latest
+    strategy:
+      matrix:
+        python-version:
+          - 3.7
+          - 3.8
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - run: pip install --upgrade pip setuptools wheel
+    - name: Install dependencies
+      uses: abatilo/actions-poetry@v1.11.0
+      with:
+        python_version: ${{ matrix.python-version }}
+        args: install
+    - run: poetry --version
+    - run: poetry show
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/pypoetry/virtualenvs
+        key: ${{ runner.os }}-python-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-python-${{ matrix.python-version }}-poetry-
+    - name: Run pre-commit
+      run: poetry run pre-commit run
