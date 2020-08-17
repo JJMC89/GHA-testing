@@ -6,7 +6,4 @@ def main():
     """Run."""
     parser = argparse.ArgumentParser(description="This")
     subparsers = parser.add_subparsers(dest="action", required=True)
-    subparsers.add_parser(
-        "reduce-tagger",
-        help="tag files for size reduction",
-    )
+    subparsers.add_parser("reduce-tagger", help="tag files for size reduction")
