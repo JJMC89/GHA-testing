@@ -52,6 +52,7 @@ jobs:
         if: ${{ matrix.python-version }} == 3.7
       - name: Run pre-commit (!py37)
         run: |
+          echo ${{ matrix.python-version }}
           poetry run pre-commit run bandit --all-files
           poetry run pre-commit run flake8 --all-files
           poetry run pre-commit run pylint --all-files
