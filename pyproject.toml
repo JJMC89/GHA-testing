@@ -27,6 +27,7 @@ multi_line_output = 3
 
 
 [tool.poetry]
+name = "pkg"
 classifiers = [
     "Development Status :: 1 - Planning",
 ]
