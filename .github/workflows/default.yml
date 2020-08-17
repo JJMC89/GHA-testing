@@ -29,7 +29,7 @@ jobs:
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v2
       - name: Install dependencies
-      - run: |
+        run: |
           poetry --version
           poetry install
           poetry show
