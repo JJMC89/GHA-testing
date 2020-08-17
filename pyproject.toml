@@ -28,6 +28,7 @@ multi_line_output = 3
 
 [tool.poetry]
 name = "pkg"
+authors = ["Someone <info@example.com>"]
 classifiers = [
     "Development Status :: 1 - Planning",
 ]
