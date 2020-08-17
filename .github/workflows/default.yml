@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os:
@@ -42,10 +42,17 @@ jobs:
           key: ${{ matrix.os }}-python-${{ matrix.python-version }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
           restore-keys: |
             ${{ matrix.os }}-python-${{ matrix.python-version }}-pre-commit-
-      - name: Install dependencies
+      - name: Install with dependencies
         run: |
           poetry --version
           poetry install
           poetry show
-      - name: Run pre-commit
-        run: poetry run pre-commit run
+      - name: Run pre-commit (py37)
+        run: poetry run pre-commit run --all-files
+        if: ${{ matrix.python-version }} == 3.7
+      - name: Run pre-commit (!py37)
+        run: |
+          poetry run pre-commit run bandit --all-files
+          poetry run pre-commit run flake8 --all-files
+          poetry run pre-commit run pylint --all-files
+        if: ${{ matrix.python-version }} != 3.7
