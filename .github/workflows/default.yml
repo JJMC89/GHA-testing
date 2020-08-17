@@ -48,20 +48,15 @@ jobs:
         run: python -m pip install --upgrade pip setuptools wheel
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v2
-      - name: Cache Poetry dependencies
+      - name: Cache dependencies
         uses: actions/cache@v1
         with:
-          path: ~/.cache/pypoetry/virtualenvs
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
+          path: |
+            ~/.cache
+            !~/.cache/exclude
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-poetry-
-      - name: Cache pre-commit dependencies
-        uses: actions/cache@v1
-        with:
-          path: ${PRE_COMMIT_HOME}
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
-          restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-pre-commit-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-
       - name: Install with dependencies
         run: |
           poetry --version
