@@ -51,12 +51,10 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
-          path: |
-            ~/.cache
-            !~/.cache/exclude
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x1-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          path: ~/.cache
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x2-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-x1-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-x2-
       - name: Install with dependencies
         run: |
           poetry --version
