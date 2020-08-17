@@ -48,10 +48,10 @@ jobs:
           poetry install
           poetry show
       - name: Run pre-commit (py37)
-        if: ${{ matrix.python-version }} == 3.7
+        if: ${{ matrix.python-version }} == '3.7'
         run: poetry run pre-commit run --all-files
       - name: Run pre-commit (!py37)
-        if: ${{ matrix.python-version }} != 3.7
+        if: ${{ matrix.python-version }} != '3.7'
         run: |
           echo ${{ matrix.python-version }}
           poetry run pre-commit run bandit --all-files
