@@ -35,8 +35,6 @@ jobs:
         python-version:
           - 3.7
           - 3.8
-    env:
-      PRE_COMMIT_HOME: $HOME
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -52,9 +50,9 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x2-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x3-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-x2-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-x3-
       - name: Install with dependencies
         run: |
           poetry --version
