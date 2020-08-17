@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windos-latest
         python-version:
           - 3.7
           - 3.8
@@ -31,8 +35,8 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ~/.cache/pypoetry/virtualenvs
-        key: ${{ runner.os }}-python-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
+        key: ${{ matrix.os }}-python-${{ matrix.python-version }}-poetry-${{ hashFiles('poetry.lock') }}
         restore-keys: |
-          ${{ runner.os }}-python-${{ matrix.python-version }}-poetry-
+          ${{ matrix.os }}-python-${{ matrix.python-version }}-poetry-
     - name: Run pre-commit
       run: poetry run pre-commit run
