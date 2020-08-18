@@ -2,8 +2,6 @@ name: Default
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '7 */7 * * *'
   workflow_dispatch:
 jobs:
   pre-commit:
@@ -21,7 +19,7 @@ jobs:
       - name: Install pylint
         run: python -m pip install pylint==2.5.3
       - name: Run pre-commit
-        uses: pre-commit/action@v2.0.0
+        uses: pre-commit/action@v2
         #with:
         #  token: ${{ secrets.GITHUB_TOKEN }}
   default:
@@ -42,47 +40,49 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Update pip, setuptools, and wheel
-        run: python -m pip install --upgrade pip setuptools wheel
-      - name: Setup Poetry
-        uses: Gr1N/setup-poetry@v2
       - name: Cache dependencies (Ubuntu)
         if: startsWith(matrix.os, 'ubuntu')
         uses: actions/cache@v2
         with:
-          path: ~/.cache
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          path: |
+            ~/.cache/pip
+            ~/.cache/pre-commit
+            ~/.cache/pypoetry
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-
       - name: Cache dependencies (MacOS)
         if: startsWith(matrix.os, 'macos')
         uses: actions/cache@v2
         with:
           path: |
-            ~/.cache
-            !~/.cache/exclude
-            /Users/runner/Library/Caches/pypoetry/
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+            ~/Library/Caches/pip
+            ~/.cache/pre-commit
+            ~/Library/Caches/pypoetry
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-
       - name: Cache dependencies (Windows)
         if: startsWith(matrix.os, 'windows')
         uses: actions/cache@v2
         with:
           path: |
-            $HOME\.cache\
-            !$HOME\.cache\exclude
-            C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+            ~\AppData\Local\pip\Cache
+            ~\.cache\pre-commit
+            ~\AppData\Local\pypoetry\Cache
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x6-
+      - name: Update pip, setuptools, and wheel
+        run: python -m pip install --upgrade pip setuptools wheel
+      - name: Setup Poetry
+        uses: Gr1N/setup-poetry@v2
       - name: Install with dependencies
         run: |
           poetry --version
           poetry install
           poetry show
       - name: Run flake8 and pylint via pre-commit
-        if: matrix.python-version != 3.7 || matrix.os != 'ubuntu-latest'
         run: |
           poetry run pre-commit run flake8 --all-files
           poetry run pre-commit run pylint --all-files
