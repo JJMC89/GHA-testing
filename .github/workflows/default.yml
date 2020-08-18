@@ -48,32 +48,32 @@ jobs:
         uses: Gr1N/setup-poetry@v2
       - name: Cache dependencies (Ubuntu)
         if: startsWith(matrix.os, 'ubuntu')
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.cache
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
       - name: Cache dependencies (MacOS)
         if: startsWith(matrix.os, 'macos')
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: |
             ~/.cache
             /Users/runner/Library/Caches/
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
       - name: Cache dependencies (Windows)
         if: startsWith(matrix.os, 'windows')
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: |
             $HOME\.cache
             $HOME\AppData\Local\pypoetry\Cache
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
       - name: Install with dependencies
         run: |
           poetry --version
