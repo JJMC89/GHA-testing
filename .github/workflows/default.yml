@@ -63,7 +63,6 @@ jobs:
         uses: Gr1N/setup-poetry@v2
       - name: Install with dependencies
         run: |
-          poetry --version
           poetry install
           poetry show
       - name: Run flake8 and pylint via pre-commit
