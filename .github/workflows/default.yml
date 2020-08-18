@@ -60,20 +60,22 @@ jobs:
         with:
           path: |
             ~/.cache
-            /Users/runner/Library/Caches/
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+            !~/.cache/exclude
+            /Users/runner/Library/Caches/pypoetry/
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-
       - name: Cache dependencies (Windows)
         if: startsWith(matrix.os, 'windows')
         uses: actions/cache@v2
         with:
           path: |
-            $HOME\.cache
-            $HOME\AppData\Local\pypoetry\Cache
-          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
+            $HOME\.cache\
+            !$HOME\.cache\exclude
+            C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs
+          key: ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-${{ hashFiles('poetry.lock', '.pre-commit-config.yaml') }}
           restore-keys: |
-            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x4-
+            ${{ matrix.os }}-python-${{ matrix.python-version }}-2x5-
       - name: Install with dependencies
         run: |
           poetry --version
