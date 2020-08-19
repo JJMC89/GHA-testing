@@ -1,7 +1,12 @@
 name: Release
 
 on:
-  push:
+  #push:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
     #branches:
     #  - master
     tags:
