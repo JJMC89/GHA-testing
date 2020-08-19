@@ -22,7 +22,7 @@ jobs:
         #with:
         #  token: ${{ secrets.GITHUB_TOKEN }}
   lint:
-    needs: 
+    needs:
       - pre-commit
     runs-on: ${{ matrix.os }}
     strategy:
