@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    #branches:
+    #  - master
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create
+        id: create
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true # false
+          prerelease: false
+      - name: Download dist
+        uses: actions/download-artifact@v2
+        with:
+          name: ubuntu-latest 3.7 dist
+          path: dist
+      - name: Upload
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/*
+      #- name: Upload
+      #  uses: meeDamian/github-release@v2.0.2
+      #  with:
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+      #    gzip: false
+      #    files: dist/*
+      #- name: Upload whl
+      #  uses: actions/upload-release-asset@v1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:
+      #    upload_url: ${{ steps.create.outputs.upload_url }}
+      #    asset_path: dist/
+      #    asset_name: ??
+      #    asset_content_type: application/zip
+      #- name: Upload tarball
+      #  uses: actions/upload-release-asset@v1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:
+      #    upload_url: ${{ steps.create.outputs.upload_url }}
+      #    asset_path: dist/
+      #    asset_name: ??
+      #    asset_content_type: application/gzip
