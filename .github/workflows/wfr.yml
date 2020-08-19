@@ -1,0 +1,26 @@
+name: wfr
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Before
+        run: |
+          ls -al
+          ls -al dist/
+      - name: Download dist
+        uses: actions/download-artifact@v2
+        with:
+          name: ubuntu-latest 3.7 dist
+          path: dist2
+      - name: After
+        run: |
+          ls -l
+          ls -l dist2/
+          ls -l dist/
