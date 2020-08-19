@@ -1,4 +1,4 @@
-name: Default
+name: CI
 on:
   push:
   pull_request:
@@ -21,7 +21,9 @@ jobs:
         uses: pre-commit/action@v2.0.0
         #with:
         #  token: ${{ secrets.GITHUB_TOKEN }}
-  default:
+  lint:
+    needs: 
+      - pre-commit
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -86,3 +88,9 @@ jobs:
           poetry run pre-commit run pylint --all-files
       - name: Build
         run: poetry build
+      - name: Upload dist artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.os }} ${{ matrix.python-version }} dist
+          path: dist/
+          if-no-files-found: error
