@@ -1,7 +1,6 @@
 name: CI
 on:
   push:
-  pull_request:
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
