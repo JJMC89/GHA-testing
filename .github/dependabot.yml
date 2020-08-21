@@ -1,3 +1,4 @@
+version: 2
 updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -5,3 +6,5 @@ updates:
       interval: 'daily'
     commit-message:
       prefix: 'ci:'
+    labels:
+      - "dependencies"
