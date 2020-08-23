@@ -8,3 +8,11 @@ updates:
       prefix: 'ci:'
     labels:
       - "ci"
+  - package-ecosystem: 'python'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    commit-message:
+      prefix: 'chore:'
+    labels:
+      - "dependencies"
