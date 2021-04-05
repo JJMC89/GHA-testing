@@ -1,18 +1,30 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.4.0
     hooks:
+      - id: check-added-large-files
       - id: check-ast
-      - id: check-byte-order-marker
+      - id: check-builtin-literals
       - id: check-case-conflict
       - id: check-docstring-first
+      - id: check-json
       - id: check-merge-conflict
+      - id: check-symlinks
       - id: check-toml
       - id: check-vcs-permalinks
+      - id: check-xml
       - id: check-yaml
       - id: debug-statements
+      - id: destroyed-symlinks
       - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: fix-encoding-pragma
+        args:
+          - --remove
       - id: forbid-new-submodules
+      - id: mixed-line-ending
+      - id: name-tests-test
+      - id: pretty-format-json
       - id: trailing-whitespace
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.1.9
@@ -21,11 +33,11 @@ repos:
       - id: remove-tabs
     # Keep this?
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.7.2
+    rev: v2.11.0
     hooks:
     -   id: pyupgrade
   - repo: https://github.com/timothycrosley/isort
-    rev: 5.4.2
+    rev: 5.8.0
     hooks:
       - id: isort
         additional_dependencies:
@@ -33,16 +45,16 @@ repos:
           - toml
   # Black must be the last formatter.
   - repo: https://github.com/psf/black
-    rev: 19.10b0
+    rev: 20.8b1
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.6.2
+    rev: 1.7.0
     hooks:
       - id: bandit
   # Lint last.
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.3
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.0
     hooks:
       - id: flake8
         additional_dependencies:
