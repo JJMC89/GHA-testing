@@ -8,3 +8,11 @@ updates:
       prefix: 'ci:'
     labels:
       - "ci"
+  - package-ecosystem: 'pip'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    commit-message:
+      prefix: 'build:'
+    labels:
+      - "dependencies"
