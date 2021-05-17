@@ -174,7 +174,7 @@ flask = ["flask"]
 
 [[package]]
 name = "mwparserfromhell"
-version = "0.6"
+version = "0.6.2"
 description = "MWParserFromHell is a parser for MediaWiki wikicode."
 category = "main"
 optional = false
@@ -405,7 +405,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "e7dcbdb9784fccd3a66a72f722d7b65aedb81d6e1326640d204dc3201a0773f0"
+content-hash = "14cb5f88f97e000cad1765b33ac0a9ce853bee0fa9b556a4b6a61b7dca65106d"
 
 [metadata.files]
 appdirs = [
@@ -498,25 +498,25 @@ mwoauth = [
     {file = "mwoauth-0.3.7.tar.gz", hash = "sha256:9e0d70a1fa6f452584de1cb853ae6c11f41233549f7839cfb879f99410f6ad46"},
 ]
 mwparserfromhell = [
-    {file = "mwparserfromhell-0.6-cp35-cp35m-macosx_10_14_x86_64.whl", hash = "sha256:116f7a60bf304ae503d0f566f274ff72e51b945587348b761e9fdf0653b7224c"},
-    {file = "mwparserfromhell-0.6-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:720390238e282050cc43999b870aa97167b45367c6ad8314244a0aa553b926f3"},
-    {file = "mwparserfromhell-0.6-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:40b431318f6b353dee0907d82b06fe270ad96b92c31241cca0cac7612547f0c8"},
-    {file = "mwparserfromhell-0.6-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:8a73d6c04333bbc4f0f402a509dc7711dd62cacfe487c41a53b044c72e23f723"},
-    {file = "mwparserfromhell-0.6-cp36-cp36m-win32.whl", hash = "sha256:eb47d8cb09fc6fcd343204d575cb1a82b3664fc5797c8054f1d7286ba96fadd9"},
-    {file = "mwparserfromhell-0.6-cp36-cp36m-win_amd64.whl", hash = "sha256:00c33680cae89c88a5d5aa5492b016329cb4cb162bfd66e3dad1d6551732b56c"},
-    {file = "mwparserfromhell-0.6-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:8f1a5588a066f171d9d9a7de1dff0b8aeab3e91f65fe9dbea1b4fbf6e84abc39"},
-    {file = "mwparserfromhell-0.6-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:6908487f663c826a3f73f289719821ec2da94ed28450e727c0b33f0dc4850ca2"},
-    {file = "mwparserfromhell-0.6-cp37-cp37m-win32.whl", hash = "sha256:bcc271dd9a20894640b8cfb14ff0146d3fe54a27e01cfd48bebd0c9770964d61"},
-    {file = "mwparserfromhell-0.6-cp37-cp37m-win_amd64.whl", hash = "sha256:418912aa0e7f5073ad20dc192ade81b25c4c9c57cafae7eb7525d612daf63d5e"},
-    {file = "mwparserfromhell-0.6-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:12b4f75842b86aabc17e87e79e8f5dd289e44cf08f199ad0350851e189661d6d"},
-    {file = "mwparserfromhell-0.6-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:50502838077997c4707617f69723e01f9e03f4e231dbaac24ed81962b92e790a"},
-    {file = "mwparserfromhell-0.6-cp38-cp38-win32.whl", hash = "sha256:b01a4f75c13eb2d26a2f2b87952e6f63389b3539519249f7de054643683a398a"},
-    {file = "mwparserfromhell-0.6-cp38-cp38-win_amd64.whl", hash = "sha256:bfa0707c5b51dea52ec6723e0d2e44791788de6cecfaed88c377fd163bfa6e19"},
-    {file = "mwparserfromhell-0.6-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:99529d8073df6e1e629b79d184a016b102e2bf94032fe9917022f28b7b8e09dc"},
-    {file = "mwparserfromhell-0.6-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:4fa5d6976b750fade6b076d7972f71e09adcd9408384cb957f4e7ac9d22b46b0"},
-    {file = "mwparserfromhell-0.6-cp39-cp39-win32.whl", hash = "sha256:3329caa591c9589deda52eae7f5b39760fadd5ee6512b52e99a36e281386f416"},
-    {file = "mwparserfromhell-0.6-cp39-cp39-win_amd64.whl", hash = "sha256:a3a761dd6b18f671dc6a5057097d16e8b4c8b556ad8ed58860d18b577690707a"},
-    {file = "mwparserfromhell-0.6.tar.gz", hash = "sha256:75787b6ab140ab267b313d37d045f3276f5dc6a9741074eddfbabc1635cb2efc"},
+    {file = "mwparserfromhell-0.6.2-cp35-cp35m-macosx_10_14_x86_64.whl", hash = "sha256:17b9fae14dce0995b30d7832748c54e9d36e92b618419bae929fceed7d39bb9d"},
+    {file = "mwparserfromhell-0.6.2-cp35-cp35m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:465e086af36fc4c43bfe73d130f4a91e83ce8684f52ba492e233eb6f596e39e7"},
+    {file = "mwparserfromhell-0.6.2-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:0c33cb431dec434f61b66b49383bc57ee5d4bba2a16ffa72671c7e7e190a0458"},
+    {file = "mwparserfromhell-0.6.2-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ca93e64aadea6785c940bb73ec50c9b3d37efe6c5bb5ad5d9846053797134f87"},
+    {file = "mwparserfromhell-0.6.2-cp36-cp36m-win32.whl", hash = "sha256:6093fb4bc91161b8c49558d2a5fca4a7693f863194ca8541418bd9826af6d8dd"},
+    {file = "mwparserfromhell-0.6.2-cp36-cp36m-win_amd64.whl", hash = "sha256:a127ebb32f742d872acc2725070cd8059ce19418fe24e5fa3a85dc1fd02adb74"},
+    {file = "mwparserfromhell-0.6.2-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:d0dc9b9cd48a1807e307d03ec758d63bb90d2a4d516366b1d2dddfa042fac8df"},
+    {file = "mwparserfromhell-0.6.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:97e199f19975d67801e0bff447495a526486987c1f216a14c928323544b5f594"},
+    {file = "mwparserfromhell-0.6.2-cp37-cp37m-win32.whl", hash = "sha256:c5335d1e67017e66044e9b6334bfdff6dd70553f1fa2c16c23628c8dd8176be7"},
+    {file = "mwparserfromhell-0.6.2-cp37-cp37m-win_amd64.whl", hash = "sha256:480991c919e7658b96800dfd8f0d95da413b37c90c0368d5e1aead83baa5e85c"},
+    {file = "mwparserfromhell-0.6.2-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:ae6f8dc258d94e309a450936fdedd592c9d9d78f51db4606f87d6ca94822d6e4"},
+    {file = "mwparserfromhell-0.6.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:3167091e89cab14f8998dd26f0331ae9b7b03d46aaecde06058cb5e7bd88cca0"},
+    {file = "mwparserfromhell-0.6.2-cp38-cp38-win32.whl", hash = "sha256:e4e6578e15ec48b89c70efc06276669377d3dbf49f414626b1882bf506bd4fdb"},
+    {file = "mwparserfromhell-0.6.2-cp38-cp38-win_amd64.whl", hash = "sha256:1aae08cbb5764a43107b8d2dc4c95707b340324f41aa1ab82098a36cabcb50db"},
+    {file = "mwparserfromhell-0.6.2-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:3008d62d9386487ddb63d45d50de62f2e3dd7b7047d46fb205f965f2f5b0650f"},
+    {file = "mwparserfromhell-0.6.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:28e7782ab1518756e232e9a18d7f8ff68f389cf5c7812fc9fbb73cd059818a28"},
+    {file = "mwparserfromhell-0.6.2-cp39-cp39-win32.whl", hash = "sha256:7a6e37b9cfc61d2f92d6f275b15cd9a8fdd1da4ce3382062537c1f5e22f5bac5"},
+    {file = "mwparserfromhell-0.6.2-cp39-cp39-win_amd64.whl", hash = "sha256:1e797c47fec1ccc855343b91ec26586300001119ade8f444aeb87b28fc9d6645"},
+    {file = "mwparserfromhell-0.6.2.tar.gz", hash = "sha256:d3f74c0101f81ff73c61985b67f2e7048a30dc5f6a578ea1544e69133988d874"},
 ]
 nodeenv = [
     {file = "nodeenv-1.6.0-py2.py3-none-any.whl", hash = "sha256:621e6b7076565ddcacd2db0294c0381e01fd28945ab36bcf00f41c5daf63bef7"},
