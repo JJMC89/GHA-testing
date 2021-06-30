@@ -48,7 +48,7 @@ pywikibot = {version="6.3.0", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
 pre-commit = "2.13.0"
-pylint = "2.8.3"
+pylint = "2.9.0"
 
 [tool.poetry.scripts]
 nfcbot = "nfcbot.cli:cli"
