@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.7
       - name: Setup Poetry
-        uses: Gr1N/setup-poetry@v5
+        uses: Gr1N/setup-poetry@v6
       - name: Install with dependencies and build
         run: |
           poetry install
