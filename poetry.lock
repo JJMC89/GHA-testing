@@ -235,7 +235,7 @@ test = ["pytest (>=4.0.1,<5.0.0)", "pytest-cov (>=2.6.0,<3.0.0)", "pytest-runner
 
 [[package]]
 name = "pylint"
-version = "2.9.5"
+version = "2.9.6"
 description = "python code static checker"
 category = "dev"
 optional = false
@@ -406,7 +406,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "3a037b28cf4bc4a7f8f93c3fbabc3cf1b7bc399aa2374b9037092f752fddea0f"
+content-hash = "e596db067e4d791200faf75faa4562b20c151397802abdf60f58c3982dac8225"
 
 [metadata.files]
 appdirs = [
@@ -536,8 +536,8 @@ pyjwt = [
     {file = "PyJWT-1.7.1.tar.gz", hash = "sha256:8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"},
 ]
 pylint = [
-    {file = "pylint-2.9.5-py3-none-any.whl", hash = "sha256:748f81e5776d6273a6619506e08f1b48ff9bcb8198366a56821cf11aac14fc87"},
-    {file = "pylint-2.9.5.tar.gz", hash = "sha256:1f333dc72ef7f5ea166b3230936ebcfb1f3b722e76c980cb9fe6b9f95e8d3172"},
+    {file = "pylint-2.9.6-py3-none-any.whl", hash = "sha256:2e1a0eb2e8ab41d6b5dbada87f066492bb1557b12b76c47c2ee8aa8a11186594"},
+    {file = "pylint-2.9.6.tar.gz", hash = "sha256:8b838c8983ee1904b2de66cce9d0b96649a91901350e956d78f289c3bc87b48e"},
 ]
 pywikibot = [
     {file = "pywikibot-6.4.0.tar.gz", hash = "sha256:de634041ca17b596a81ced7c32400b16307b0df1830d3870a3aa2faec9ce7a8e"},
