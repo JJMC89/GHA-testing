@@ -47,7 +47,7 @@ mwparserfromhell = "0.6.2"
 pywikibot = {version="6.5.0", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
-pre-commit = "2.13.0"
+pre-commit = "2.14.0"
 pylint = "2.9.6"
 
 [tool.poetry.scripts]
