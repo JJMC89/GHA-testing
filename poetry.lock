@@ -263,7 +263,7 @@ toml = ">=0.7.1"
 
 [[package]]
 name = "pywikibot"
-version = "6.5.0"
+version = "6.6.0"
 description = "Python MediaWiki Bot Framework"
 category = "main"
 optional = false
@@ -421,7 +421,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "a8cc2f069f189e80bef0e14d2c7e51f102020cae516c1f820cef6d03f39211e6"
+content-hash = "6284581f9954cd4719eb5ecba26c5278dbc50da95312bc968df4434f539972c4"
 
 [metadata.files]
 appdirs = [
@@ -563,7 +563,7 @@ pylint = [
     {file = "pylint-2.10.2.tar.gz", hash = "sha256:6758cce3ddbab60c52b57dcc07f0c5d779e5daf0cf50f6faacbef1d3ea62d2a1"},
 ]
 pywikibot = [
-    {file = "pywikibot-6.5.0.tar.gz", hash = "sha256:d14f7e6db108e88477b41b00b9fc6a439e106433ffb0c9723b0aa173562d5829"},
+    {file = "pywikibot-6.6.0.tar.gz", hash = "sha256:a31ed747c0070da4abcde2074af2fba6fd3b59920c6e89208b3659901e36a694"},
 ]
 pyyaml = [
     {file = "PyYAML-5.4.1-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:3b2b1824fe7112845700f815ff6a489360226a5609b96ec2190a45e62a9fc922"},
