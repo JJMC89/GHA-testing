@@ -264,11 +264,11 @@ typing-extensions = {version = ">=3.10.0", markers = "python_version < \"3.10\""
 
 [[package]]
 name = "pywikibot"
-version = "6.6.5"
+version = "7.0.0"
 description = "Python MediaWiki Bot Framework"
 category = "main"
 optional = false
-python-versions = ">=3.5.0"
+python-versions = ">=3.5.3"
 
 [package.dependencies]
 mwoauth = {version = ">=0.2.4,<0.3.1 || >0.3.1", optional = true, markers = "extra == \"mwoauth\""}
@@ -280,14 +280,14 @@ Graphviz = ["pydot (>=1.2)"]
 Tkinter = ["Pillow (>=8.1.1)"]
 "commons_information.py" = ["mwparserfromhell (>=0.5.0)"]
 eventstreams = ["sseclient (>=0.0.18,!=0.0.23,!=0.0.24)"]
-flake8 = ["flake8 (>=3.9.1)", "pydocstyle (>=4.0.0)", "flake8-bugbear (!=21.4.1)", "flake8-coding", "flake8-colors (>=0.1.9)", "flake8-docstrings (>=1.3.1)", "flake8-future-import", "flake8-mock (>=0.3)", "flake8-print (>=2.0.1)", "flake8-quotes (>=2.0.1)", "flake8-string-format", "flake8-tuple (>=0.2.8)", "flake8-no-u-prefixed-strings (>=0.2)", "pep8-naming (>=0.7)", "pyflakes (>=2.1.0)", "flake8-comprehensions (>=2.2.0)", "flake8-comprehensions (>=3.1.4)"]
+flake8 = ["flake8 (>=3.9.1)", "darglint", "pydocstyle (>=4.0.0)", "flake8-bugbear (!=21.4.1,!=21.11.28)", "flake8-coding", "flake8-colors (>=0.1.9)", "flake8-docstrings (>=1.3.1)", "flake8-future-import", "flake8-mock (>=0.3)", "flake8-print (>=2.0.1)", "flake8-quotes (>=2.0.1)", "flake8-string-format", "flake8-tuple (>=0.2.8)", "flake8-no-u-prefixed-strings (>=0.2)", "pep8-naming (>=0.7)", "pyflakes (>=2.1.0)", "flake8-comprehensions (>=2.2.0)", "flake8-comprehensions (>=3.1.4)"]
 hacking = ["hacking"]
 html = ["beautifulsoup4"]
 http = ["fake-useragent"]
-isbn = ["python-stdnum (>=1.16)"]
+isbn = ["python-stdnum (>=1.17)"]
 mwoauth = ["mwoauth (>=0.2.4,!=0.3.1)"]
 mwparserfromhell = ["mwparserfromhell (>=0.5.0)"]
-mysql = ["PyMySQL (>=0.6.7,<1.0.0)", "PyMySQL (>=1.0.0)"]
+mysql = ["PyMySQL (>=0.7.11,<1.0.0)", "PyMySQL (>=1.0.0)"]
 "patrol.py" = ["mwparserfromhell (>=0.5.0)"]
 scripts = ["mwparserfromhell (>=0.5.0)", "mwparserfromhell (>=0.5.0)", "memento_client (>=0.5.1,!=0.6.0)"]
 "weblinkchecker.py" = ["memento_client (>=0.5.1,!=0.6.0)"]
@@ -422,7 +422,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "2dbe234bfef5478df975d2ee5f60e21f26f607ae2aa5e93ed059cb42f896d116"
+content-hash = "894c619bc5bd78365c1f82306070d4a0ff4f94cab2029620dc1a080df477285a"
 
 [metadata.files]
 appdirs = [
@@ -569,7 +569,7 @@ pylint = [
     {file = "pylint-2.12.0.tar.gz", hash = "sha256:245c87e5da54c35b623c21b35debf87d93b18bf9e0229515cc172d0b83d627cd"},
 ]
 pywikibot = [
-    {file = "pywikibot-6.6.5.tar.gz", hash = "sha256:72c2fc4615de0b7b0a158ac5407317ed3dd9d1250d371281cc18672e9d0f384d"},
+    {file = "pywikibot-7.0.0.tar.gz", hash = "sha256:a0f8ae0f1d5ae9016c2178d0d8d85f0e52e373ea081fe0738f27be4db7ccb44f"},
 ]
 pyyaml = [
     {file = "PyYAML-5.4.1-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:3b2b1824fe7112845700f815ff6a489360226a5609b96ec2190a45e62a9fc922"},
