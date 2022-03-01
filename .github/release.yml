@@ -1,0 +1,21 @@
+changelog:
+  exclude:
+    labels:
+      - chore
+      - ci
+  categories:
+    - title: Features
+      labels:
+        - enhancement
+        - feature
+    - title: Bug fixes
+      labels:
+        - bug
+        - bugfix
+        - fix
+    - title: Dependency updates
+      labels:
+        - dependencies
+    - title: Other changes
+      labels:
+        - '*'
