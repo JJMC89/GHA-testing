@@ -1,28 +1,47 @@
 name: Release
 on:
+  push:
+    tags:
+      - v*.*.*
   release:
     types:
       - released
 jobs:
-  release:
+  build-release:
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.4
       - name: Set up Python 3.7
         uses: actions/setup-python@v2.3.2
         with:
           python-version: 3.7
       - name: Install Poetry
         uses: snok/install-poetry@v1.3.1
-      - name: Install with dependencies and build
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Check version and git tag
         run: |
-          poetry install
-          poetry show
-          poetry build
-      - name: Upload assets
+          DATE=v$(date -u +%y.%-m.%-d)
+          VERSION=v$(poetry version --short)
+          TAG=$(git describe --tags --abbrev=0)
+          if [ $VERSION != $DATE ]; then
+            echo Version should be $DATE instead of $VERSION.
+            exit 1
+          elif [ $TAG != $DATE ]; then
+            echo Tag should be $DATE instead of $TAG.
+            exit 1
+          fi
+      - name: Build
+        run: poetry build
+      - name: GitHub release with assets
+        id: release
         uses: softprops/action-gh-release@v0.1.14
         with:
           files: dist/*
+          generate_release_notes: true
+      - name: Rollback release on failure
+        if: failure() && steps.release.outputs.id != ''
+        uses: author/action-rollback@1.0.0
+        with:
+          id: ${{ steps.release.outputs.id }}
