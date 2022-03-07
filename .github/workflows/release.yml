@@ -42,6 +42,6 @@ jobs:
           generate_release_notes: true
       - name: Rollback release on failure
         if: failure() && steps.release.outputs.id != ''
-        uses: author/action-rollback@1.0.0
+        uses: author/action-rollback@1.0.3
         with:
           id: ${{ steps.release.outputs.id }}
