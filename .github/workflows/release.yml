@@ -44,4 +44,4 @@ jobs:
         if: failure() && steps.release.outputs.id != ''
         uses: author/action-rollback@1.0.3
         with:
-          id: ${{ steps.release.outputs.id }}
+          release_id: ${{ steps.release.outputs.id }}
