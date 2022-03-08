@@ -1,13 +1,16 @@
 name: Release
 on:
   push:
+    branches:
+      - master
     tags:
       - v*.*.*
-  release:
-    types:
-      - released
 jobs:
+  lint:
+    uses: ./.github/workflows/ci.yml
   build-release:
+    name: Build and publish release
+    needs: lint
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -20,6 +23,8 @@ jobs:
         uses: snok/install-poetry@v1.3.1
       - name: Checkout
         uses: actions/checkout@v3.0.0
+        with:
+          persist-credentials: false
       - name: Check version and git tag
         run: |
           DATE=v$(date -u +%y.%-m.%-d)
