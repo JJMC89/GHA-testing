@@ -7,9 +7,23 @@ on:
       - '**'
   workflow_call:
 jobs:
-  main:
+  codeql:
+    name: CodeQL
     permissions:
       security-events: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.0
+        with:
+          persist-credentials: false
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: python
+      - name: CodeQL analysis
+        uses: github/codeql-action/analyze@v1
+  main:
     strategy:
       matrix:
         python-version:
@@ -29,19 +43,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.0.0
         with:
+          fetch-depth: 0
           persist-credentials: false
-        #  fetch-depth: 0
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
         #with:
         #  token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
         run: poetry install
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: python
-      - name: Build
-        run: poetry build
-      - name: CodeQL analysis
-        uses: github/codeql-action/analyze@v1
