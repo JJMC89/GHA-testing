@@ -7,31 +7,47 @@ on:
       - '**'
   workflow_call:
 jobs:
-  main:
+  codeql:
+    name: CodeQL
     permissions:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.7
+      - name: Checkout
+        uses: actions/checkout@v3.0.0
+        with:
+          persist-credentials: false
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: python
+      - name: CodeQL analysis
+        uses: github/codeql-action/analyze@v1
+  main:
+    strategy:
+      matrix:
+        python-version:
+          - '3.7'
+          - '3.8'
+          - '3.9'
+          - '3.10'
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3.0.0
         with:
-          python-version: 3.7
+          python-version: ${{ matrix.python-version }}
       - name: Install Poetry
         uses: snok/install-poetry@v1.3.1
       - name: Checkout
         uses: actions/checkout@v3.0.0
         with:
+          fetch-depth: 0
           persist-credentials: false
-        #  fetch-depth: 0
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
         #with:
         #  token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: python
-      - name: Build
-        run: poetry build
-      - name: CodeQL analysis
-        uses: github/codeql-action/analyze@v1
+      - name: Install
+        run: poetry install
