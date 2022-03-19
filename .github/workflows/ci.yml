@@ -1,28 +1,15 @@
 name: CI
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
-      - '**'
+      - master
     tags-ignore:
       - '**'
   workflow_call:
 jobs:
-  codeql:
-    name: CodeQL
-    permissions:
-      security-events: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3.0.0
-        with:
-          persist-credentials: false
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: python
-      - name: CodeQL analysis
-        uses: github/codeql-action/analyze@v1
   main:
     strategy:
       matrix:
@@ -43,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.0.0
         with:
-          fetch-depth: 0
+          #fetch-depth: 0
           persist-credentials: false
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
