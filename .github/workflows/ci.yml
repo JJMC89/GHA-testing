@@ -7,7 +7,7 @@ on:
     branches:
       - master
     tags-ignore:
-      - '**'
+      - 'v*'
   workflow_call:
 jobs:
   codeql:
