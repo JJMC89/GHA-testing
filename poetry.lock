@@ -57,7 +57,7 @@ python-versions = "*"
 
 [[package]]
 name = "dotmap"
-version = "1.3.26"
+version = "1.3.28"
 description = "ordered, dynamically-expandable dot-access dictionary"
 category = "main"
 optional = false
@@ -423,7 +423,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "e4b5f988ee060494f5aa6ffbb32195dd50d659623dcc6e1d766355dbb746a6ce"
+content-hash = "4a4fca332cf0b77f7be680f2dd0371522215202f0ae2f6e9d88edf892eae107f"
 
 [metadata.files]
 astroid = [
@@ -451,8 +451,8 @@ distlib = [
     {file = "distlib-0.3.4.zip", hash = "sha256:e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579"},
 ]
 dotmap = [
-    {file = "dotmap-1.3.26-py3-none-any.whl", hash = "sha256:6644faf2a9161db2f0136d5cc77b877cb1e87c17a46dbe345e5d4fea794fced2"},
-    {file = "dotmap-1.3.26.tar.gz", hash = "sha256:cc87300f3a61d70f2bd18103ea2747dea846a2381a8321f43ce65cbd7afdfe3d"},
+    {file = "dotmap-1.3.28-py3-none-any.whl", hash = "sha256:9deeeeb15da352243c158f2bf676ca978907b96b9c3ac2d72a0d65f9e2e2eb66"},
+    {file = "dotmap-1.3.28.tar.gz", hash = "sha256:ae2a8362ab63b2dcb1ebcd73cfcd1a67a8418b3370e15dcd3aeb089c71a55e82"},
 ]
 filelock = [
     {file = "filelock-3.4.1-py3-none-any.whl", hash = "sha256:a4bc51381e01502a30e9f06dd4fa19a1712eab852b6fb0f84fd7cce0793d8ca3"},
