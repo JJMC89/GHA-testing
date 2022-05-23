@@ -265,7 +265,7 @@ typing-extensions = {version = ">=3.10.0", markers = "python_version < \"3.10\""
 
 [[package]]
 name = "pywikibot"
-version = "7.2.0"
+version = "7.3.0"
 description = "Python MediaWiki Bot Framework"
 category = "main"
 optional = false
@@ -290,7 +290,7 @@ mwoauth = ["mwoauth (>=0.2.4,!=0.3.1)"]
 mwparserfromhell = ["mwparserfromhell (>=0.5.0)"]
 mysql = ["PyMySQL (>=0.7.11,<1.0.0)", "PyMySQL (>=1.0.0)"]
 "patrol.py" = ["mwparserfromhell (>=0.5.0)"]
-scripts = ["mwparserfromhell (>=0.5.0)", "mwparserfromhell (>=0.5.0)", "memento_client (>=0.5.1,!=0.6.0)"]
+scripts = ["mwparserfromhell (>=0.5.0)", "memento_client (>=0.5.1,!=0.6.0)"]
 "weblinkchecker.py" = ["memento_client (>=0.5.1,!=0.6.0)"]
 wikitextparser = ["wikitextparser (>=0.47.5)", "wikitextparser (>=0.47.0)"]
 
@@ -423,7 +423,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "1f801701fa841b2127f0f18549217cb2bc6321c7d1830f55f70793232928105d"
+content-hash = "e003f0422a5e7bb254b6d6c8046235d2dff367bc91c9a78827a9272267dd06c1"
 
 [metadata.files]
 astroid = [
@@ -581,7 +581,7 @@ pylint = [
     {file = "pylint-2.12.0.tar.gz", hash = "sha256:245c87e5da54c35b623c21b35debf87d93b18bf9e0229515cc172d0b83d627cd"},
 ]
 pywikibot = [
-    {file = "pywikibot-7.2.0.tar.gz", hash = "sha256:e7cd0bd9ea26c40eb45169b37e3f2845d075f3e171b77da1731bca788719699a"},
+    {file = "pywikibot-7.3.0.tar.gz", hash = "sha256:69e804be46c9f79b350cbd63a519ff26ba08e26e35ddf9da9eb7cfe8e3a0cf14"},
 ]
 pyyaml = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
