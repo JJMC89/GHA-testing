@@ -38,7 +38,7 @@ packages = [
     { include = "pkg", from = "src" },
 ]
 readme = "README.rst"
-version = "22.3.19"
+version = "22.6.28"
 
 [tool.poetry.dependencies]
 python = ">=3.6.1,<4"
