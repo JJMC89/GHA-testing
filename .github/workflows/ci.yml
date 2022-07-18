@@ -19,11 +19,11 @@ jobs:
         with:
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2.1.15
+        uses: github/codeql-action/init@v2.1.16
         with:
           languages: python
       - name: CodeQL analysis
-        uses: github/codeql-action/analyze@v2.1.15
+        uses: github/codeql-action/analyze@v2.1.16
   main:
     strategy:
       matrix:
