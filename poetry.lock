@@ -212,8 +212,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-docs = ["Sphinx (>=4)", "furo (>=2021.7.5b38)", "proselint (>=0.10.2)", "sphinx-autodoc-typehints (>=1.12)"]
-test = ["appdirs (==1.4.4)", "pytest (>=6)", "pytest-cov (>=2.7)", "pytest-mock (>=3.6)"]
+test = ["pytest-mock (>=3.6)", "pytest-cov (>=2.7)", "pytest (>=6)", "appdirs (==1.4.4)"]
+docs = ["sphinx-autodoc-typehints (>=1.12)", "proselint (>=0.10.2)", "furo (>=2021.7.5b38)", "Sphinx (>=4)"]
 
 [[package]]
 name = "pre-commit"
@@ -242,10 +242,10 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
+tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
+docs = ["zope.interface", "sphinx-rtd-theme", "sphinx"]
+dev = ["pre-commit", "mypy", "coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)", "cryptography (>=3.3.1)", "zope.interface", "sphinx-rtd-theme", "sphinx"]
 crypto = ["cryptography (>=3.3.1)"]
-dev = ["sphinx", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.3.1)", "pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)", "mypy", "pre-commit"]
-docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
-tests = ["pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)"]
 
 [[package]]
 name = "pylint"
@@ -266,7 +266,7 @@ typing-extensions = {version = ">=3.10.0", markers = "python_version < \"3.10\""
 
 [[package]]
 name = "pywikibot"
-version = "7.4.0"
+version = "7.5.0"
 description = "Python MediaWiki Bot Framework"
 category = "main"
 optional = false
@@ -446,7 +446,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.1,<4"
-content-hash = "16b70f3ec7ac4c3d65ca61346168ba870dedf6502efef658bf930d75b494df9e"
+content-hash = "2702c8a4f1f3561aad2c4abc23c17f14d014d665939a35896e60ab5e348f0238"
 
 [metadata.files]
 astroid = [
@@ -603,8 +603,8 @@ pylint = [
     {file = "pylint-2.12.0.tar.gz", hash = "sha256:245c87e5da54c35b623c21b35debf87d93b18bf9e0229515cc172d0b83d627cd"},
 ]
 pywikibot = [
-    {file = "pywikibot-7.4.0-py3-none-any.whl", hash = "sha256:a3d5030a602c5b3f87698aeb8eee278f3a8c117fe87f19bc76022cce37061ca8"},
-    {file = "pywikibot-7.4.0.tar.gz", hash = "sha256:c797f68b54322f9bb198cb6ea1d1a34327ab18ccec48cba5b7096981cdfa04ec"},
+    {file = "pywikibot-7.5.0-py3-none-any.whl", hash = "sha256:96f7a130bb9920c26aa2eb0bee5196b509cfc04a369c2c07b498b2f424e60600"},
+    {file = "pywikibot-7.5.0.tar.gz", hash = "sha256:905ab433088022a342d5f8b1fee0acadd239c131eaacc33f917d7bafba1d28fe"},
 ]
 pyyaml = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
