@@ -9,6 +9,10 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+        with:
+          persist-credentials: false
       - name: Setup MySQL
         run: |
           sudo /etc/init.d/mysql start
