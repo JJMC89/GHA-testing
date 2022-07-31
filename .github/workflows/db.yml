@@ -1,0 +1,17 @@
+name: DB testing
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  workflow_call:
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup MySQL
+        run: |
+          sudo /etc/init.d/mysql start
+          testing/create-database
+          mysql -e 'SHOW DATABASES;' -uroot -proot
+          mysql test_db -e 'SHOW TABLES;' -uroot -proot
