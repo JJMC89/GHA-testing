@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+MYSQLARGS='--user=root --password=root'
+
+mysql $MYSQLARGS -e 'CREATE DATABASE IF NOT EXISTS copypatrol_tests DEFAULT CHARACTER SET = utf8mb4;'
+mysql copypatrol_tests $MYSQLARGS < sql/create-tables.sql
