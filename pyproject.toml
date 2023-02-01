@@ -4,12 +4,12 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.black]
-target-version = ["py37"]
+target-version = ["py38"]
 line-length = 79  # default: 88
 
 
 [tool.isort]
-py_version = 37
+py_version = 38
 add_imports = ["from __future__ import annotations"]
 atomic = true
 ensure_newline_before_comments = true
@@ -35,13 +35,13 @@ readme = "README.rst"
 version = "22.6.28"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 dotmap = "1.3.30"
 mwparserfromhell = "0.6.4"
 pywikibot = {version="8.0.0", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
-pylint = "2.13.9"
+pylint = "2.15.10"
 
 
 [tool.pylint]
