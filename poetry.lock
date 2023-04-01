@@ -400,14 +400,14 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "8.0.0"
+version = "8.0.3"
 description = "Python MediaWiki Bot Framework"
 category = "main"
 optional = false
 python-versions = ">=3.6.1"
 files = [
-    {file = "pywikibot-8.0.0-py3-none-any.whl", hash = "sha256:6be51d542321c28bda5cdda1157482a4c615182e5251b5ab0b67299e417d49c0"},
-    {file = "pywikibot-8.0.0.tar.gz", hash = "sha256:6740a43d0a53690e26b4df4f6e697d2bf8b95170c954013c41253cb8d0f63c4b"},
+    {file = "pywikibot-8.0.3-py3-none-any.whl", hash = "sha256:a1c90f6d4d46bad91e451b773c5caa4800b5fcfa21ccf5e32f3276a6a533b954"},
+    {file = "pywikibot-8.0.3.tar.gz", hash = "sha256:35e8d6933c857bdc7fd0196a6cd4a26bec47b8b1f5eaa7eaa46cf8d3de2e26f0"},
 ]
 
 [package.dependencies]
@@ -637,4 +637,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "a6b35b3382429a2e26d1f898ddda128135f8eda76c8ea2d40edcd01efda4669a"
+content-hash = "3cbe01a6023f717b46fe1d99ce7dea40ef92f4a2b7bae34e5ffe756a4d20d118"
