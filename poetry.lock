@@ -342,17 +342,17 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylint"
-version = "2.17.4"
+version = "2.17.5"
 description = "python code static checker"
 optional = false
 python-versions = ">=3.7.2"
 files = [
-    {file = "pylint-2.17.4-py3-none-any.whl", hash = "sha256:7a1145fb08c251bdb5cca11739722ce64a63db479283d10ce718b2460e54123c"},
-    {file = "pylint-2.17.4.tar.gz", hash = "sha256:5dcf1d9e19f41f38e4e85d10f511e5b9c35e1aa74251bf95cdd8cb23584e2db1"},
+    {file = "pylint-2.17.5-py3-none-any.whl", hash = "sha256:73995fb8216d3bed149c8d51bba25b2c52a8251a2c8ac846ec668ce38fab5413"},
+    {file = "pylint-2.17.5.tar.gz", hash = "sha256:f7b601cbc06fef7e62a754e2b41294c2aa31f1cb659624b9a85bcba29eaf8252"},
 ]
 
 [package.dependencies]
-astroid = ">=2.15.4,<=2.17.0-dev0"
+astroid = ">=2.15.6,<=2.17.0-dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
     {version = ">=0.2", markers = "python_version < \"3.11\""},
@@ -371,13 +371,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "8.1.2"
+version = "8.3.0"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.6.1"
 files = [
-    {file = "pywikibot-8.1.2-py3-none-any.whl", hash = "sha256:05f78a650e2b13848bc4dfb47347a1870844f0f24d61979bedb2097a859324f3"},
-    {file = "pywikibot-8.1.2.tar.gz", hash = "sha256:0ba3b07cc3417d7d0c0ffb4d4901e2e27070bad4f0215b7728c2ba7e9315f7c2"},
+    {file = "pywikibot-8.3.0-py3-none-any.whl", hash = "sha256:1fa5c408da2ec22e0d78ac7e95213d7208864e6928b3edbfd490689fccc72cf8"},
+    {file = "pywikibot-8.3.0.tar.gz", hash = "sha256:6f1fef5ce1712afd303837855262bcd802e056759da92cd1216d21e8faae8de3"},
 ]
 
 [package.dependencies]
@@ -610,4 +610,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "3be12ea8d9261f36015aab517d31c8009957f33cab689eb916681050dff1da29"
+content-hash = "48025a1797f1232a6f0a11b95f652ceaa45467c53fc6fff8ebc920a650fc47d5"
