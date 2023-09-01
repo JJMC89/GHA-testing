@@ -20,9 +20,9 @@ jobs:
         with:
           python-version: 3.8
       - name: Install Poetry
-        uses: snok/install-poetry@v1.3.3
+        uses: snok/install-poetry@v1.3.4
       - name: Checkout
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v3.6.0
         with:
           persist-credentials: false
       - name: Check version and git tag
