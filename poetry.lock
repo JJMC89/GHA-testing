@@ -290,13 +290,13 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylint"
-version = "3.0.2"
+version = "3.0.3"
 description = "python code static checker"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "pylint-3.0.2-py3-none-any.whl", hash = "sha256:60ed5f3a9ff8b61839ff0348b3624ceeb9e6c2a92c514d81c9cc273da3b6bcda"},
-    {file = "pylint-3.0.2.tar.gz", hash = "sha256:0d4c286ef6d2f66c8bfb527a7f8a629009e42c99707dec821a03e1b51a4c1496"},
+    {file = "pylint-3.0.3-py3-none-any.whl", hash = "sha256:7a1585285aefc5165db81083c3e06363a27448f6b467b3b0f30dbd0ac1f73810"},
+    {file = "pylint-3.0.3.tar.gz", hash = "sha256:58c2398b0301e049609a8429789ec6edf3aabe9b6c5fec916acd18639c16de8b"},
 ]
 
 [package.dependencies]
@@ -307,7 +307,7 @@ dill = [
     {version = ">=0.3.7", markers = "python_version >= \"3.12\""},
     {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
 ]
-isort = ">=4.2.5,<6"
+isort = ">=4.2.5,<5.13.0 || >5.13.0,<6"
 mccabe = ">=0.6,<0.8"
 platformdirs = ">=2.2.0"
 tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
@@ -320,13 +320,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "8.5.1"
+version = "8.6.0"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.6.1"
 files = [
-    {file = "pywikibot-8.5.1-py3-none-any.whl", hash = "sha256:5b8a501213689bdb6ad04c1bfcc0739158cf2c20cf8925e08b34fef29dcf52a1"},
-    {file = "pywikibot-8.5.1.tar.gz", hash = "sha256:ddcd2e8028475533860fc77ffd0b9136a64c9afa2bc375029857b65e69be12f2"},
+    {file = "pywikibot-8.6.0-py3-none-any.whl", hash = "sha256:5c273a0affbaaeb8608e69544739447146b7a95ed19a4f2425d8a5f3f8578694"},
+    {file = "pywikibot-8.6.0.tar.gz", hash = "sha256:380454e6b6e53a74f4925d1afaed9b485325fa62f8d475eb3931a5b83a1e0015"},
 ]
 
 [package.dependencies]
@@ -475,4 +475,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "8754b7cbc59b0d9b98b5e62f7a84178d05794d121d50db3eab6c7de556fd3a35"
+content-hash = "b066cd10502a14e61637f4e05b087e03891fbaae9e924ba3c33a6a491c686f0f"
