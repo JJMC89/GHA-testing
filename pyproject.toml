@@ -38,10 +38,10 @@ version = "22.6.28"
 python = "^3.8"
 dotmap = "1.3.30"
 mwparserfromhell = "0.6.5"
-pywikibot = {version="8.5.1", extras=["mwoauth"]}
+pywikibot = {version="8.6.0", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
-pylint = "3.0.2"
+pylint = "3.0.3"
 
 
 [tool.pylint]
