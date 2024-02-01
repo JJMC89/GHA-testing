@@ -37,7 +37,7 @@ version = "22.6.28"
 [tool.poetry.dependencies]
 python = "^3.8"
 dotmap = "1.3.30"
-mwparserfromhell = "0.6.5"
+mwparserfromhell = "0.6.6"
 pywikibot = {version="8.6.0", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
