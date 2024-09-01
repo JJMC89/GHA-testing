@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.8
-        uses: actions/setup-python@v5.1.1
+        uses: actions/setup-python@v5.2.0
         with:
           python-version: 3.8
       - name: Install Poetry
-        uses: snok/install-poetry@v1.3.4
+        uses: snok/install-poetry@v1.4.1
       - name: Checkout
         uses: actions/checkout@v4.1.7
         with:
