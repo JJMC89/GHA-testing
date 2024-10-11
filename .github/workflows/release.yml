@@ -15,10 +15,10 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.8
+      - name: Set up Python 3.9
         uses: actions/setup-python@v5.2.0
         with:
-          python-version: 3.8
+          python-version: 3.9
       - name: Install Poetry
         uses: snok/install-poetry@v1.4.1
       - name: Checkout
