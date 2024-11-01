@@ -2,13 +2,13 @@
 
 [[package]]
 name = "astroid"
-version = "3.2.4"
+version = "3.3.5"
 description = "An abstract syntax tree for Python with inference support."
 optional = false
-python-versions = ">=3.8.0"
+python-versions = ">=3.9.0"
 files = [
-    {file = "astroid-3.2.4-py3-none-any.whl", hash = "sha256:413658a61eeca6202a59231abb473f932038fbcbf1666587f66d482083413a25"},
-    {file = "astroid-3.2.4.tar.gz", hash = "sha256:0e14202810b30da1b735827f78f5157be2bbd4a7a59b7707ca0bfc2fb4c0063a"},
+    {file = "astroid-3.3.5-py3-none-any.whl", hash = "sha256:a9d1c946ada25098d790e079ba2a1b112157278f3fb7e718ae6a9252f5835dc8"},
+    {file = "astroid-3.3.5.tar.gz", hash = "sha256:5cfc40ae9f68311075d27ef68a4841bdc5cc7f6cf86671b49f00607d30188e2d"},
 ]
 
 [package.dependencies]
@@ -332,17 +332,17 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylint"
-version = "3.2.7"
+version = "3.3.1"
 description = "python code static checker"
 optional = false
-python-versions = ">=3.8.0"
+python-versions = ">=3.9.0"
 files = [
-    {file = "pylint-3.2.7-py3-none-any.whl", hash = "sha256:02f4aedeac91be69fb3b4bea997ce580a4ac68ce58b89eaefeaf06749df73f4b"},
-    {file = "pylint-3.2.7.tar.gz", hash = "sha256:1b7a721b575eaeaa7d39db076b6e7743c993ea44f57979127c517c6c572c803e"},
+    {file = "pylint-3.3.1-py3-none-any.whl", hash = "sha256:2f846a466dd023513240bc140ad2dd73bfc080a5d85a710afdb728c420a5a2b9"},
+    {file = "pylint-3.3.1.tar.gz", hash = "sha256:9f3dcc87b1203e612b78d91a896407787e708b3f189b5fa0b307712d49ff0c6e"},
 ]
 
 [package.dependencies]
-astroid = ">=3.2.4,<=3.3.0-dev0"
+astroid = ">=3.3.4,<=3.4.0-dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
     {version = ">=0.2", markers = "python_version < \"3.11\""},
@@ -362,13 +362,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "9.3.1"
+version = "9.5.0"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "pywikibot-9.3.1-py3-none-any.whl", hash = "sha256:70ede0e5c41a2c51bd31b22ea91f5c3ddb088215fc623d556a903fe9f1facf30"},
-    {file = "pywikibot-9.3.1.tar.gz", hash = "sha256:acf1d47e4d360c4ca36f7cbea25228ad8ee75e39c4aaa02bbbc71538ebc6f9bd"},
+    {file = "pywikibot-9.5.0-py3-none-any.whl", hash = "sha256:4f2e3d8c00bf6410418dc78489a13d139354c832df312f78a693a27d0fffa53f"},
+    {file = "pywikibot-9.5.0.tar.gz", hash = "sha256:6543ac89a750db37a440373ec1cf4cbcd80b05742482ebeb0ee7e90bcfb590ba"},
 ]
 
 [package.dependencies]
@@ -380,10 +380,8 @@ requests = ">=2.21.0"
 [package.extras]
 create-isbn-edition-py = ["isbnlib", "unidecode"]
 eventstreams = ["sseclient (>=0.0.18,<0.0.23)"]
-flake8 = ["darglint2", "flake8 (>=5.0.4)", "flake8-bugbear (!=24.1.17)", "flake8-comprehensions (>=3.13.0)", "flake8-docstrings (>=1.4.0)", "flake8-future-annotations", "flake8-mock-x2", "flake8-no-u-prefixed-strings (>=0.2)", "flake8-print (>=5.0.0)", "flake8-quotes (>=3.3.2)", "flake8-raise", "flake8-tuple (>=0.4.1)", "pep8-naming (==0.13.3)", "pep8-naming (>=0.14.0)", "pydocstyle (>=6.3.0)"]
 google = ["google (>=1.7)"]
 graphviz = ["pydot (>=1.4.1)"]
-hacking = ["hacking", "importlib-metadata (<5.0.0)"]
 html = ["beautifulsoup4 (>=4.7.1)"]
 http = ["fake-useragent (>=1.4.0)"]
 isbn = ["python-stdnum (>=1.19)"]
@@ -487,4 +485,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "054d9b62176f972535486b12feabb01b71f605259be5a15cd385ba62ce957790"
+content-hash = "b12d3485b1813f1c2fee319e4ac2b8f8f7886c25b520b40f1563f93fd5c190c3"
