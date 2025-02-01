@@ -41,7 +41,7 @@ mwparserfromhell = "0.6.6"
 pywikibot = {version="9.6.1", extras=["mwoauth"]}
 
 [tool.poetry.dev-dependencies]
-pylint = "3.3.3"
+pylint = "3.3.4"
 
 
 [tool.pylint]
