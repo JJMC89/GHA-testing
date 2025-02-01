@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.9
-        uses: actions/setup-python@v5.3.0
+        uses: actions/setup-python@v5.4.0
         with:
           python-version: 3.9
       - name: Install Poetry
@@ -41,7 +41,7 @@ jobs:
         run: poetry build
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@v2.2.0
+        uses: softprops/action-gh-release@v2.2.1
         with:
           files: dist/*
           generate_release_notes: true
