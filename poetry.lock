@@ -362,13 +362,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "9.6.1"
+version = "9.6.3"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "pywikibot-9.6.1-py3-none-any.whl", hash = "sha256:c9ef1d35c7d1400f30b60090919e92d46f9de928803a66e6f0f6db1c7859ca6a"},
-    {file = "pywikibot-9.6.1.tar.gz", hash = "sha256:ef7e8b114c16d4ba1f4b5d74e53c5558730615a129406c1af96188936390c660"},
+    {file = "pywikibot-9.6.3-py3-none-any.whl", hash = "sha256:9918bd96cf7ad0ba1ccd4e4f7f6f42c74f1e63d72009eac6f586a94641a5f70a"},
+    {file = "pywikibot-9.6.3.tar.gz", hash = "sha256:b52128ea8f7f61946dd195adecdd1698ceb038aea541cef02d8c8fb782fb8618"},
 ]
 
 [package.dependencies]
@@ -486,4 +486,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "0332994617ab32322c1c4d0eb80333e05ed986a0588082f7bb12a9b154f7874b"
+content-hash = "4325911131f557beaa6dd038b392af0226b07b4dbe474f6c4351155db1cac0ca"
