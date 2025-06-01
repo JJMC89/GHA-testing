@@ -348,14 +348,14 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylint"
-version = "3.3.6"
+version = "3.3.7"
 description = "python code static checker"
 optional = false
 python-versions = ">=3.9.0"
 groups = ["dev"]
 files = [
-    {file = "pylint-3.3.6-py3-none-any.whl", hash = "sha256:8b7c2d3e86ae3f94fb27703d521dd0b9b6b378775991f504d7c3a6275aa0a6a6"},
-    {file = "pylint-3.3.6.tar.gz", hash = "sha256:b634a041aac33706d56a0d217e6587228c66427e20ec21a019bc4cdee48c040a"},
+    {file = "pylint-3.3.7-py3-none-any.whl", hash = "sha256:43860aafefce92fca4cf6b61fe199cdc5ae54ea28f9bf4cd49de267b5195803d"},
+    {file = "pylint-3.3.7.tar.gz", hash = "sha256:2b11de8bde49f9c5059452e0c310c079c746a0a8eeaa789e5aa966ecc23e4559"},
 ]
 
 [package.dependencies]
@@ -379,14 +379,14 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "10.0.0"
+version = "10.1.0"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.8.0"
 groups = ["main"]
 files = [
-    {file = "pywikibot-10.0.0-py3-none-any.whl", hash = "sha256:9d94c5b5e54d354c2dab760eb9d0c4d3a6f97dad668ac4876d1fd11405061cc4"},
-    {file = "pywikibot-10.0.0.tar.gz", hash = "sha256:b69c23a242d96543e2283083e213df8c1760d75a76f4b66fe386b78624de22e1"},
+    {file = "pywikibot-10.1.0-py3-none-any.whl", hash = "sha256:dcaaa4d2252bd3e975a8e9a09790c5cc4650ffe772caa4a829f98bb154b463ae"},
+    {file = "pywikibot-10.1.0.tar.gz", hash = "sha256:764550ab6062ca7567ebf1af146d82112944cf8eab0da5699195a8cc78fb70ed"},
 ]
 
 [package.dependencies]
@@ -399,7 +399,7 @@ requests = ">=2.31.0"
 [package.extras]
 create-isbn-edition-py = ["isbnlib", "unidecode"]
 eventstreams = ["requests-sse (>=0.5.0)"]
-google = ["google (>=1.7)"]
+google = ["googlesearch-python (>=1.3.0)"]
 graphviz = ["pydot (>=3.0.2)"]
 html = ["beautifulsoup4 (>=4.7.1)"]
 http = ["fake-useragent (==1.5.1) ; python_version < \"3.9\"", "fake-useragent (>=2.0.3) ; python_version > \"3.8\""]
@@ -512,4 +512,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "38e2a8c56f8a6e1fa8789ae6dee08701942e66c922f593cf30114c809eb1aebe"
+content-hash = "2cfc23297af75eeaa63d9d51b289d8952c7ffba5b69bfb56889651cbb208f5c2"
