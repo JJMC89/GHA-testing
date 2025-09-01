@@ -363,14 +363,14 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylint"
-version = "3.3.7"
+version = "3.3.8"
 description = "python code static checker"
 optional = false
 python-versions = ">=3.9.0"
 groups = ["dev"]
 files = [
-    {file = "pylint-3.3.7-py3-none-any.whl", hash = "sha256:43860aafefce92fca4cf6b61fe199cdc5ae54ea28f9bf4cd49de267b5195803d"},
-    {file = "pylint-3.3.7.tar.gz", hash = "sha256:2b11de8bde49f9c5059452e0c310c079c746a0a8eeaa789e5aa966ecc23e4559"},
+    {file = "pylint-3.3.8-py3-none-any.whl", hash = "sha256:7ef94aa692a600e82fabdd17102b73fc226758218c97473c7ad67bd4cb905d83"},
+    {file = "pylint-3.3.8.tar.gz", hash = "sha256:26698de19941363037e2937d3db9ed94fb3303fdadf7d98847875345a8bb6b05"},
 ]
 
 [package.dependencies]
@@ -394,14 +394,14 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pywikibot"
-version = "10.2.0"
+version = "10.4.0"
 description = "Python MediaWiki Bot Framework"
 optional = false
 python-versions = ">=3.8.0"
 groups = ["main"]
 files = [
-    {file = "pywikibot-10.2.0-py3-none-any.whl", hash = "sha256:67c509f5cd177b34dd3448b01266d6eda1254725ddaab76345edcbfea0590678"},
-    {file = "pywikibot-10.2.0.tar.gz", hash = "sha256:a705c5d8981c2baac0d58350d95435b2f043b1cf31b775f1dbea345ebf9c3993"},
+    {file = "pywikibot-10.4.0-py3-none-any.whl", hash = "sha256:d905fd682bfaad16f5d32e328cd8f8b34dfe1be63757727007b72f3367c81c53"},
+    {file = "pywikibot-10.4.0.tar.gz", hash = "sha256:6690ffcd31d40d1fe8c0ff52ed64e2a59a0626e1ddb0e46cfbbc36deed48af17"},
 ]
 
 [package.dependencies]
@@ -527,4 +527,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "8f870bea259fc141cebf6b8550b81b3f27a93a708d103e8c1e4c67943249f99a"
+content-hash = "4ab5c208c41a79bcdbdee09b239d673a1bc4425c037a6bd446558c13ee4b3423"
