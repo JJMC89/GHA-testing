@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.9
-        uses: actions/setup-python@v6.0.0
+        uses: actions/setup-python@v6.1.0
         with:
           python-version: 3.9
       - name: Install Poetry
         uses: snok/install-poetry@v1.4.1
       - name: Checkout
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.0
         with:
           persist-credentials: false
       - name: Check version and git tag
@@ -41,7 +41,7 @@ jobs:
         run: poetry build
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@v2.4.1
+        uses: softprops/action-gh-release@v2.4.2
         with:
           files: dist/*
           generate_release_notes: true
