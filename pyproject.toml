@@ -1,30 +1,20 @@
 [build-system]
-requires = ["poetry>=1.0.8"]
+requires = ["poetry>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
-[tool.black]
-target-version = ["py39"]
-line-length = 79  # default: 88
-
-
-[tool.isort]
-py_version = 39
-add_imports = ["from __future__ import annotations"]
-atomic = true
-ensure_newline_before_comments = true
-force_grid_wrap = 0
-include_trailing_comma = true
-lines_after_imports = 2
-multi_line_output = 3
-use_parentheses = true
-
-
-[tool.poetry]
+[project]
+authors = [
+    { name = "JJMC89" },
+]
 name = "pkg"
-authors = ["Someone <info@example.com>"]
 classifiers = [
     "Development Status :: 1 - Planning",
+]
+dependencies = [
+    "dotmap == 1.3.30",
+    "mwparserfromhell == 0.7.2",
+    "pywikibot [mysql, mwoauth] == 11.1.0",
 ]
 description = "description foo"
 keywords = ["testing"]
@@ -32,34 +22,16 @@ packages = [
     { include = "pkg", from = "src" },
 ]
 readme = "README.rst"
-version = "22.6.28"
-
-[tool.poetry.dependencies]
-python = "^3.9"
-dotmap = "1.3.30"
-mwparserfromhell = "0.7.2"
-pywikibot = {version="11.1.0", extras=["mwoauth"]}
-
-[tool.poetry.dev-dependencies]
-pylint = "3.3.9"
+requires-python = ">=3.13"
+version = "26.4.11"
 
 
-[tool.pylint]
+[tool.black]
+target-version = ["py313"]
+line-length = 79  # default: 88
 
-[tool.pylint.master]
-# Use multiple processes to speed up Pylint.
-jobs = 0  # default: 1
 
-[tool.pylint.basic]
-# Good variable names which should always be accepted
-good-names = "e,i,j,k,_"  # default: i,j,k,ex,Run,_
-
-[tool.pylint.design]
-# Maximum number of parent classes
-max-parents = 8  # default: 7
-
-[tool.pylint.format]
-max-line-length = 79  # default: 100
-
-[tool.pylint.reports]
-reports = "yes"
+[tool.isort]
+atomic = true
+profile = "black"
+py_version = 313
