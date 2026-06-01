@@ -22,7 +22,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install Poetry
-        uses: snok/install-poetry@v1.4.1
+        uses: snok/install-poetry@v1.4.2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v6.2.0
         with:
